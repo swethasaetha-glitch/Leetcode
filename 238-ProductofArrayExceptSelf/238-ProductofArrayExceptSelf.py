@@ -1,4 +1,4 @@
-# Last updated: 6/17/2026, 11:48:32 AM
+# Last updated: 6/17/2026, 11:48:47 AM
 1class Solution:
 2    def isValid(self, s: str) -> bool:
 3        while "()" in s or "{}" in s or "[]" in s:
