@@ -1,9 +1,4 @@
-# Last updated: 6/17/2026, 11:48:47 AM
+# Last updated: 6/17/2026, 12:08:56 PM
 1class Solution:
-2    def isValid(self, s: str) -> bool:
-3        while "()" in s or "{}" in s or "[]" in s:
-4            s = s.replace("()", "")
-5            s = s.replace("{}", "")
-6            s = s.replace("[]", "")
-7
-8        return s == ""
+2    def rotateString(self, s: str, goal: str) -> bool:
+3        return len(s)==len(goal) and goal in (s+s)
