@@ -1,14 +1,18 @@
-# Last updated: 6/4/2026, 9:42:40 PM
-class Solution:
-    def maxProduct(self, nums: List[int]) -> int:
-        max_val=nums[0]
-        min_val=nums[0]
-        ans=nums[0]
-        for i in range(1,len(nums)):
-            num=nums[i]
-            if num<0:
-                max_val,min_val=min_val,max_val
-            max_val=max(num,num*max_val)
-            min_val=min(num,num*min_val)
-            ans=max(ans,max_val)
-        return ans
+# Last updated: 6/27/2026, 11:37:54 AM
+1class Solution:
+2    def countPrimes(self, n: int):
+3
+4        if n <= 2:
+5            return 0
+6
+7        prime = [True] * n
+8        prime[0] = prime[1] = False
+9
+10        for i in range(2, int(n ** 0.5) + 1):
+11
+12            if prime[i]:
+13
+14                for j in range(i * i, n, i):
+15                    prime[j] = False
+16
+17        return sum(prime)
