@@ -1,10 +1,12 @@
-# Last updated: 6/29/2026, 6:38:34 PM
+# Last updated: 6/29/2026, 7:01:19 PM
 1class Solution:
-2    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
-3        arr=nums1+nums2
-4        arr.sort()
-5        n=len(arr)
-6        if n%2==1:
-7            return arr[n//2]
-8        else:
-9            return (arr[n//2]+arr[n//2-1])/2
+2    def isUgly(self, n: int) -> bool:
+3        if n <= 0:
+4            return False
+5        while n % 2 == 0:
+6            n //= 2
+7        while n % 3 == 0:
+8            n //= 3
+9        while n % 5 == 0:
+10            n //= 5
+11        return n == 1
