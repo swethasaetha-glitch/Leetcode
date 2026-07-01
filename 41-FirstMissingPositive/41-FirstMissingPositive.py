@@ -1,12 +1,4 @@
-# Last updated: 6/30/2026, 3:53:06 PM
+# Last updated: 7/1/2026, 10:15:22 AM
 1class Solution:
-2    def firstMissingPositive(self, nums: List[int]) -> int:
-3        nums.sort()
-4
-5        ans = 1
-6
-7        for num in nums:
-8            if num == ans:
-9                ans += 1
-10
-11        return ans
+2    def reverseWords(self, s: str) -> str:
+3        return " ".join(s.split()[::-1])
